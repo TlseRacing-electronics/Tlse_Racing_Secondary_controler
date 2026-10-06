@@ -77,9 +77,9 @@ int16_t errorshutdown(ADC_HandleTypeDef *hadc1, ADC_HandleTypeDef *hadc2)
 }
 
 
-
-uint32_t motorvalue(uint16_t captmoteur)
+uint32_t motorvalue(uint16_t captmoteur,ADC_HandleTypeDef *hadc1)
 {
+    hadc1 = captmoteur;
     uint32_t ret= (captmoteur *(1048.576));
     return ret;
 }
